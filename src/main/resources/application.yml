@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: fuxpin-eureka-server
+
+# Eureka Configuration Properties
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+
+server:
+  port: 8446
+  servlet:
+    context-path: /fuxpin-eureka-server
+  name: https://xrodrig.dnsnet.info:${server.port}
+  ssl:
+    enabled: true
+    keyPassword: 123456
+    keyStore: file:C:\Users\amgri\desenvolupament\ss-tfg-unir\xrodrigdnskeystore
+    keyStorePassword: 123456
