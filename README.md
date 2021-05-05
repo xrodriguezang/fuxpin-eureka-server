@@ -1,0 +1,1 @@
+# fuxpin-eureka-server
