@@ -1,25 +1,37 @@
-spring:
-  application:
-    name: fuxpin-eureka-server
-
-server:
-  port: 8446
-  servlet:
-    context-path: /fuxpin-eureka-server
-  name: https://xrodrig.dnsnet.info:${server.port}
-  ssl:
-    enabled: true
-    keyPassword: 123456
-    keyStore: file:C:\Users\amgri\desenvolupament\ss-tfg-unir\xrodrigdnskeystore
-    keyStorePassword: 123456
+#server:
+#  port: 8446
+#  name: https://xrodrig.dnsnet.info:${server.port}
+#  ssl:
+#    enabled: true
+#    keyPassword: 123456
+#    keyStore: file:C:\Users\amgri\desenvolupament\ss-tfg-unir\xrodrigdnskeystore
+#    keyStorePassword: 123456
 
 # Eureka Configuration Properties
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+      #defaultZone: https://xrodrig.dnsnet.info:8761/eureka/
+
+#eureka:
+#  instance:
+#    hostname: xrodrig.dnsnet.info
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: https://${eureka.instance.hostname}:${server.port}/fuxpin-eureka-server/
+#  server:
+#    wait-time-in-ms-when-sync-empty: 0
+
+
+
+server:
+  port: 8761
+
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: https://xrodrig.dnsnet.info:8446/fuxpin-eureka-server/
-  server:
-    wait-time-in-ms-when-sync-empty: 0
-
+    registerWithEureka: false
+    fetchRegistry: false
