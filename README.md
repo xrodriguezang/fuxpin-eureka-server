@@ -19,11 +19,11 @@ For SSL keytore, to configure de keytore password, in ***VM options*** define:
 
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server*** 
 
-* Add in buil.gradle:
+* Add in buil.gradle, the bootstrap stater:
 ````
 implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 ````
-* Starter Spring Cloud Config Client
+* Add in buil.gradle, the starter Spring Cloud Config Client:
 ````
 implementation 'org.springframework.cloud:spring-cloud-starter-config'
 ````
@@ -36,6 +36,17 @@ spring:
     config:
       name: fuxpin-eureka-server -> Base name file
       label: develop -> Branch: develop, master,...
+````
+
+This example, but in query:
+
+``https://pi.intranet.cat:8446/fuxpin-config-server/fuxpin-eureka-server/localhost/develop``
+
+## Define enviorments
+
+To enable the *production* profile. In this cas, the server run reading production properties. In ***VM options*** define:
+````
+-Dspring.profiles.active=production
 ````
 
 # More info:
