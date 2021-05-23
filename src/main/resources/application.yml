@@ -7,17 +7,17 @@
 #    fetchRegistry: false
 
 server:
-  port: 8446
+  port: 8447
   name: https://xrodrig.dnsnet.info:${server.port}
   ssl:
     enabled: true
     keyPassword: 123456
     keyStore: file:C:\Users\amgri\desenvolupament\ss-tfg-unir\xrodrigdnskeystore
-    keyStorePassword: 123456
+    keyStorePassword: ${keystore.password}
 
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
     service-url:
-      defaultZone: https://xrodrig.dnsnet.info:8446/eureka/
+      defaultZone: ${server.name}/eureka/
