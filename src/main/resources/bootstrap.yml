@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    # Profile actived. example: ventas-localhost.yml
+    active: localhost
+  cloud:
+    config:
+      # user + password Config Cloud Config Server
+      username: ${rest.user}
+      password: ${rest.password}
+      # DEVELOPMENT!
+      # uri: https://xrodrig.dnsnet.info:8445/fuxpin-config-server/
+      uri: https://pi.intranet.cat:8446/fuxpin-config-server/
+      name: fuxpin-eureka-server
+      # branch: master / develop / feature ...
+      label: develop
+  config:
+    import: configserver:https://pi.intranet.cat:8446/fuxpin-config-server/
