@@ -17,7 +17,7 @@ For SSL keytore, to configure de keytore password, in ***VM options*** define:
 -Dkeystore.password=password 
 ````
 
-## Configuration properties arae provided by ***Fuxpin Cloud Config Server*** 
+## Configure the application to get the properties from ***Fuxpin Cloud Config Server*** 
 
 * Add in buil.gradle:
 ````
