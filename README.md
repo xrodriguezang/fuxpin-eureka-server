@@ -12,13 +12,12 @@ https://xrodrig.dnsnet.info:8446/
 ![](https://img.shields.io/badge/fuxpin%20legacy%20ventas%20rol%20microservice-0.0.1-blue)
 
 ## Enviorment variables
-You have to define in environment variables(java), for example, to populate the github credentials. In Spring Boot task -> ***VM options*** define:
-
+For SSL keytore, to configure de keytore password, in ***VM options*** define:
 ````
 -Dkeystore.password=password 
 ````
 
-## Configuration served - provided by Fuxpin Cloud Config Server 
+## Configuration properties arae provided by ***Fuxpin Cloud Config Server*** 
 
 * Add in buil.gradle:
 ````
@@ -27,6 +26,16 @@ implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 * Starter Spring Cloud Config Client
 ````
 implementation 'org.springframework.cloud:spring-cloud-starter-config'
+````
+* Add to bootstrap.yml the properties to connect with the Fuxpin Cloud Config Server. Important fields:
+````
+spring:
+  profiles:
+    active: localhost   -> Profile actived. example: fuxpin-eureka-server-localhost.yml
+  cloud:
+    config:
+      name: fuxpin-eureka-server -> Base name file
+      label: develop -> Branch: develop, master,...
 ````
 
 # More info:
