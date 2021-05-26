@@ -1,8 +1,9 @@
 # fuxpin-eureka-server
 
-Fuxpin ``Spring Cloud Netflix Eureka``
+Fuxpin ``Spring Netflix Eureka Server``
 
-Eureka Server that provides the Black box Modernization with a microservice layer.
+Eureka Server provides the Black box Modernization with a microservice layer.
+
 The properties are provided by Fuxpin Spring Cloud Config Server.
 
 # Homepage:
@@ -10,7 +11,7 @@ The properties are provided by Fuxpin Spring Cloud Config Server.
 https://xrodrig.dnsnet.info:8446/
 
 ## Current version
-![](https://img.shields.io/badge/fuxpin%20legacy%20ventas%20rol%20microservice-0.0.1-blue)
+![](https://img.shields.io/badge/fuxpin%20eureka%20server-0.0.1-blue)
 
 ## Enviorment variables
 For SSL keytore, to configure de keytore password, in ***VM options*** define:
@@ -39,20 +40,20 @@ spring:
       label: develop -> Branch: develop, master,...
 ````
 
-This example, but in query:
+This example, in query:
 
 ``https://pi.intranet.cat:8446/fuxpin-config-server/fuxpin-eureka-server/localhost/develop``
 
 ## Enviorment variables
-You have to define in environment variables(java), for example, to populate the github credentials. In Spring Boot task -> ***VM options*** define:
+
+In Spring Boot task -> ***VM options*** define:
 
 ````
 -Dkeystore.password=password 
 ````
 
-## Define enviorments
-
 To enable the *production* profile. In this cas, the server run reading production properties. In ***VM options*** define:
+
 ````
 -Dspring.profiles.active=production
 ````
@@ -61,11 +62,11 @@ To enable the *production* profile. In this cas, the server run reading producti
 
 * default (localhost):
 
-``C:\Users\amgri\.jdks\jdk-11.0.7\bin\java -jar -Drest.user=user -Drest.password=passwrod -Dkeystore.password=password .\eurekaserver-0.0.1.jar``
+``C:\Users\amgri\.jdks\jdk-11.0.7\bin\java -jar -Drest.user=user -Drest.password=passwrod -Dkeystore.password=password .\fuxpin-eureka-server-0.0.1.jar``
 
 * production:
 
-``C:\Users\amgri\.jdks\jdk-11.0.7\bin\java -jar -Drest.user=user -Drest.password=passwrod -Dkeystore.password=password -Dspring.profiles.active=production .\eurekaserver-0.0.1.jar``
+``C:\Users\amgri\.jdks\jdk-11.0.7\bin\java -jar -Drest.user=user -Drest.password=passwrod -Dkeystore.password=password -Dspring.profiles.active=production .\fuxpin-eureka-server-0.0.1.jar``
 
 Commands to generate .jar:
 
@@ -80,7 +81,7 @@ ${PROJECT_DIRECTORY}/build/libs/
 ## Production launcher
 
 ````
-java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password eurekaserver-0.0.1.jar
+java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password fuxpin-eureka-server-0.0.1.jar
 ````
 
 ## Create a Run Java Jar Application with Systemd
