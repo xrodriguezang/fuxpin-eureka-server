@@ -1,6 +1,6 @@
 spring:
   profiles:
-    # Profile actived. example: ventas-localhost.yml
+    # Profile actived. example: ventas-localhost.yml. I'ts default value
     active: localhost
   cloud:
     config:
