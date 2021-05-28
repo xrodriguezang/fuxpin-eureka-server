@@ -103,7 +103,7 @@ ${PROJECT_DIRECTORY}/build/libs/
 ## Production launcher
 
 ````
-java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password fuxpin-eureka-server-0.0.1.jar
+java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password -Deureka.user=user -Deureka.password=password fuxpin-eureka-server-0.0.1.jar
 ````
 
 ## Create a Run Java Jar Application with Systemd
@@ -126,7 +126,7 @@ Description=Fuxpin Cloud Config Server Java service
 
 [Service]
 WorkingDirectory=/opt/java-jars
-ExecStart=java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password fuxpin-eureka-server-0.0.1.jar
+ExecStart=java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password -Deureka.user=user -Deureka.password=password fuxpin-eureka-server-0.0.1.jar
 User=pi
 Type=simple
 Restart=on-failure
