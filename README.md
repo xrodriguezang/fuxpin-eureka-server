@@ -6,6 +6,8 @@ Eureka Server provides the Black box Modernization with a microservice layer.
 
 The properties are provided by Fuxpin Spring Cloud Config Server.
 
+Application secured by Spring Security
+
 # Homepage:
 
 https://xrodrig.dnsnet.info:8446/
@@ -15,8 +17,28 @@ https://xrodrig.dnsnet.info:8446/
 
 ## Enviorment variables
 For SSL keytore, to configure de keytore password, in ***VM options*** define:
+
+Localhost:
+
 ````
+-Dspring.profiles.active=localhost
 -Dkeystore.password=password 
+-Drest.user=user 
+-Drest.password=password
+-Deureka.user=user 
+-Deureka.password=password 
+````
+
+Production:
+
+````
+-Dspring.profiles.active=production
+-Dkeystore.password=password 
+-Drest.user=user 
+-Drest.password=password
+-Deureka.user=user 
+-Deureka.password=password 
+ 
 ````
 
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server*** 
@@ -180,5 +202,4 @@ Created symlink /etc/systemd/system/multi-user.target.wants/fuxpineurekaserver.s
 * https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html
 * https://blog.bi-geek.com/arquitecturas-spring-cloud-netflix-eureka/
 * https://spring.io/blog/2015/07/14/microservices-with-spring
-* https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html
 
