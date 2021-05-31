@@ -4,7 +4,17 @@ Fuxpin ``Spring Netflix Eureka Server``
 
 Eureka Server provides the Black box Modernization with a microservice layer.
 
-The properties are provided by Fuxpin Spring Cloud Config Server.
+The properties are provided by ``Fuxpin Spring Cloud Config Server``.
+
+Application secured by ``Spring Security``
+
+# This project Uses
+<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" width="200"></br>
+
+&#8594; Spring Cloud Config Server</br>
+&#8594; Spring Eureka Netflix Server</br>
+&#8594; Spring Data</br>
+&#8594; Spring Security
 
 # Homepage:
 
@@ -15,8 +25,28 @@ https://xrodrig.dnsnet.info:8446/
 
 ## Enviorment variables
 For SSL keytore, to configure de keytore password, in ***VM options*** define:
+
+Localhost:
+
 ````
+-Dspring.profiles.active=localhost
 -Dkeystore.password=password 
+-Drest.user=user 
+-Drest.password=password
+-Deureka.user=user 
+-Deureka.password=password 
+````
+
+Production:
+
+````
+-Dspring.profiles.active=production
+-Dkeystore.password=password 
+-Drest.user=user 
+-Drest.password=password
+-Deureka.user=user 
+-Deureka.password=password 
+ 
 ````
 
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server*** 
@@ -81,7 +111,7 @@ ${PROJECT_DIRECTORY}/build/libs/
 ## Production launcher
 
 ````
-java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password fuxpin-eureka-server-0.0.1.jar
+java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password -Deureka.user=user -Deureka.password=password fuxpin-eureka-server-0.0.1.jar
 ````
 
 ## Create a Run Java Jar Application with Systemd
@@ -104,7 +134,7 @@ Description=Fuxpin Cloud Config Server Java service
 
 [Service]
 WorkingDirectory=/opt/java-jars
-ExecStart=java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password fuxpin-eureka-server-0.0.1.jar
+ExecStart=java -Xms128m -Xmx256m -jar -Dspring.profiles.active=production -Dkeystore.password=password -Drest.user=user -Drest.password=password -Deureka.user=user -Deureka.password=password fuxpin-eureka-server-0.0.1.jar
 User=pi
 Type=simple
 Restart=on-failure
@@ -180,5 +210,4 @@ Created symlink /etc/systemd/system/multi-user.target.wants/fuxpineurekaserver.s
 * https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html
 * https://blog.bi-geek.com/arquitecturas-spring-cloud-netflix-eureka/
 * https://spring.io/blog/2015/07/14/microservices-with-spring
-* https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html
 

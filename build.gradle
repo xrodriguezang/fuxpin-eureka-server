@@ -23,6 +23,8 @@ dependencies {
 	// By default is not activated. It is activated to get the properties of Spring Cloud Config - Server
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	// Starter to became a Spring Cloud Config Client
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
