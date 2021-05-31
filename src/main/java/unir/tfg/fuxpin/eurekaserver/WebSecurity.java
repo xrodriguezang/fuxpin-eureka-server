@@ -10,7 +10,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf()
-                .disable()
+                .disable()   // Eureka clients will not generally possess a valid cross site request forgery (CSRF) token you will need to disable this requirement
                 .authorizeRequests()
                 .anyRequest().authenticated()
                 .and()
