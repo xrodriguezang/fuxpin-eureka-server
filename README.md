@@ -12,8 +12,6 @@ Application secured by ``Spring Security``
 <img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" width="200"></br>
 
 &#8594; Spring Cloud Config Server</br>
-&#8594; Spring Eureka Netflix Server</br>
-&#8594; Spring Data</br>
 &#8594; Spring Security
 
 # Homepage:
