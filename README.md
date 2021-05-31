@@ -4,7 +4,7 @@ Fuxpin ``Spring Netflix Eureka Server``
 
 Eureka Server provides the Black box Modernization with a microservice layer.
 
-The properties are provided by ``Fuxpin Spring Cloud Config Server``.
+Configuration provided by ``Fuxpin Spring Cloud Config Server``.
 
 Application secured by ``Spring Security``
 
