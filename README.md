@@ -21,32 +21,6 @@ https://xrodrig.dnsnet.info:8446/
 ## Current version
 ![](https://img.shields.io/badge/fuxpin%20eureka%20server-0.0.1-blue)
 
-## Enviorment variables
-For SSL keytore, to configure de keytore password, in ***VM options*** define:
-
-Localhost:
-
-````
--Dspring.profiles.active=localhost
--Dkeystore.password=password 
--Drest.user=user 
--Drest.password=password
--Deureka.user=user 
--Deureka.password=password 
-````
-
-Production:
-
-````
--Dspring.profiles.active=production
--Dkeystore.password=password 
--Drest.user=user 
--Drest.password=password
--Deureka.user=user 
--Deureka.password=password 
- 
-````
-
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server*** 
 
 * Add in buil.gradle, the bootstrap stater:
@@ -72,18 +46,30 @@ This example, in query:
 
 ``https://pi.intranet.cat:8446/fuxpin-config-server/fuxpin-eureka-server/localhost/develop``
 
-## Enviorment variables
+## Environment variables
+In ***VM options*** define:
 
-In Spring Boot task -> ***VM options*** define:
+Localhost:
 
 ````
+-Dspring.profiles.active=localhost
 -Dkeystore.password=password 
+-Drest.user=user 
+-Drest.password=password
+-Deureka.user=user 
+-Deureka.password=password 
 ````
 
-To enable the *production* profile. In this cas, the server run reading production properties. In ***VM options*** define:
+Production:
 
 ````
 -Dspring.profiles.active=production
+-Dkeystore.password=password 
+-Drest.user=user 
+-Drest.password=password
+-Deureka.user=user 
+-Deureka.password=password 
+ 
 ````
 
 ## Examples *Serverless* execution
