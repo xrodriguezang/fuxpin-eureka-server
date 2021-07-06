@@ -12,7 +12,7 @@ Application secured by ``Spring Security``
 <img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" width="200"></br>
 
 &#8594; Spring Cloud Config Server</br>
-&#8594; Spring Security
+&#8594; Secured by Spring Security
 
 # Homepage:
 
@@ -23,6 +23,18 @@ https://pi.intranet.cat:8448/
 
 Eureka Netflix Server implements a Black Box Modernization using a layer of microservices. 
 This Sevice Layer provides any interaction with the old application.
+
+# Replication example
+
+Eureka server shows the same service replicated two times:
+
+<img src="https://raw.githubusercontent.com/xrodriguezang/fuxpin-legacy-ventas-rol-microservice/main/src/main/resources/static/MicroservicesInAction.png" alt="drawing" width="500"/>
+
+It server send the request to the same microservice in two machines:
+
+<img src="https://raw.githubusercontent.com/xrodriguezang/fuxpin-legacy-ventas-rol-microservice/482de232f6915f0249078349ff7d0a499e322e0b/src/main/resources/static/MicroservicesLog-Balancer.png" alt="drawing" width="500"/>
+
+
 
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server***
 
