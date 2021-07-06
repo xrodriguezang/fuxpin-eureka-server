@@ -22,7 +22,7 @@ https://pi.intranet.cat:8448/
 ![](https://img.shields.io/badge/fuxpin%20eureka%20server-0.0.1-blue)
 
 Eureka Netflix Server implements a Black Box Modernization using a layer of microservices. 
-This layer provides any interaction with the old application.
+This Sevice Layer provides any interaction with the old application.
 
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server***
 
