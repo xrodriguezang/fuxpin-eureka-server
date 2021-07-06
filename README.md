@@ -28,13 +28,11 @@ This Sevice Layer provides any interaction with the old application.
 
 Eureka server shows the same service replicated two times:
 
-<img src="https://raw.githubusercontent.com/xrodriguezang/fuxpin-legacy-ventas-rol-microservice/main/src/main/resources/static/MicroservicesInAction.png" alt="drawing" width="500"/>
+<img src="https://raw.githubusercontent.com/xrodriguezang/fuxpin-eureka-server/main/src/main/resources/imageDocs/MicroservicesInAction.png" alt="drawing" width="800"/>
 
-It server send the request to the same microservice in two machines:
+It server send the request to the same microservice in two machines. It acts as Load Balancer: 
 
-<img src="https://raw.githubusercontent.com/xrodriguezang/fuxpin-legacy-ventas-rol-microservice/482de232f6915f0249078349ff7d0a499e322e0b/src/main/resources/static/MicroservicesLog-Balancer.png" alt="drawing" width="500"/>
-
-
+<img src="https://github.com/xrodriguezang/fuxpin-eureka-server/blob/main/src/main/resources/imageDocs/MicroservicesLog-Balancer.png" alt="drawing" width="800"/>
 
 ## Configure the application to get the properties from ***Fuxpin Cloud Config Server***
 
