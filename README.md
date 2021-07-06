@@ -16,12 +16,15 @@ Application secured by ``Spring Security``
 
 # Homepage:
 
-https://xrodrig.dnsnet.info:8446/
+https://pi.intranet.cat:8448/
 
 ## Current version
 ![](https://img.shields.io/badge/fuxpin%20eureka%20server-0.0.1-blue)
 
-## Configure the application to get the properties from ***Fuxpin Cloud Config Server*** 
+Eureka Netflix Server implements a Black Box Modernization using a layer of microservices. 
+This Sevice Layer provides any interaction with the old application.
+
+## Configure the application to get the properties from ***Fuxpin Cloud Config Server***
 
 * Add in buil.gradle, the bootstrap stater:
 ````
